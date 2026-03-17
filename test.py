@@ -19,6 +19,15 @@ def movie_irs():
 
     print("\nTesting Delete")
     system.delete_movies(760161)
+def test_sort_movie():
+
+    system = MovieIRS()
+
+    system.read_movies("horror_movies.csv")
+
+    system.sort_movie()
+    
+    print(system._MovieIRS__list_movie)
 
 if __name__ == "__main__":
-    movie_irs()
+    test_sort_movie()
